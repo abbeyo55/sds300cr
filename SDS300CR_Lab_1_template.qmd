@@ -1,0 +1,130 @@
+---
+title: "Lab 1"
+author: "YOUR NAME HERE"
+format:
+  html:
+    embed-resources: true
+      toc: true
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    self-contained: true
+editor: source
+
+---
+
+# **Part 0:** The preamble
+This is where you should prepare yourself for all of the work below. In other words, load all of the packages you might need to do the work you are doing below. It is generally a good idea to load data and packages at the top of an R document/script. Today we are just loading packages since reading in data is part of our tutorial. 
+
+```{r}
+#Loading ALL of my necessary packages here :)
+
+
+
+```
+
+
+# **Part 1:** Make an Rproject for this class. 
+
+Need help making a proj? Item number 3 in [This](https://jbaumann3.github.io/intro_r_for_bio_eco/getting_started.html) tutorial can help. 
+
+# **Part 2:** Ensure you working directory is set correctly!
+
+## a.) Set your working directory to work nicely with your rproj (you should have done this when you setup your proj). Show me what directory you chose using code in the chunk below
+
+```{r}
+#My rproj working directory is: 
+
+
+```
+
+## b.) CHANGE your working directory using a line of code (the function you want here is setwd())
+```{r}
+
+```
+
+## c.) CHANGE your working directory using the RStudio GUI. Set it back to your preferred working directory and show me that it worked using code
+```{r}
+
+```
+
+# **Part 3:** Read in data!
+
+## a.) Read in data from file (csv)
+Go to the course moodle page and find the Labs section. Download the 'reef_life_survey_habitat.csv' file. Save it somewhere meaningful (your course rproj directory, perhaps?). Now, read it into R USING CODE (not the 'import dataset' GUI). Using read.csv() (base R) or read_csv (tidyverse) is strongly preferred. Have another method? Ask me first!
+
+```{r}
+#Reading in data from a file, naming is, and preparing it as an R object for later use 
+
+
+```
+
+## b.) Read in data from a url (github, in this case)
+Follow [this link to my github page.](https://github.com/jbaumann3/BIOL234_Biostats_MHC)
+Next, find the file 'belize_coral_survey_data_2016.csv' and read that file into R using the URL. Need help with this? Try looking [here](https://jbaumann3.github.io/intro_r_for_bio_eco/rbasics.html) first, then ask me!
+
+```{r}
+#Reading in some coral survey from Justin's github to practice with!
+
+
+```
+
+
+# **5. Practice data maniuplation**
+
+## a) Using the data from my github, select columns of interest. This includes type, lat, life.history, species, and percent.of.cover (for now)
+
+```{r}
+#select columns
+
+
+```
+
+## b.) Filter that dataframe to include all life.history options except for NA
+```{r}
+#Filter the data
+
+
+```
+
+## c.) Make a new column that contains a name for each latitude. Currently latitude (lat) is a number. Let's make it a name that aligns with a coastal town, as this is easier to understand. Lat 1 is San Pedro, Lat 2 is Belize City, Lat 3 is Dangriga, Lat 4 is Placencia, Lat 5 is Punta Gorda. There are many ways to do this. Give it a shot! I'm happy to help. 
+```{r}
+#Add a new column that assigns a name to each latitude
+
+
+```
+
+
+# **6.) Basic Plots** 
+Make 3 exploratory plots in ggplot. You can manipulate data anyway you'd like. I strongly recommend avoiding bar graphs. 
+```{r}
+# plot 1
+
+
+```
+
+```{r}
+# plot 2
+
+
+```
+
+```{r}
+# plot 3
+```
+
+
+
+# **7.) save your dataframe to file**
+```{r}
+#save your dataframe to file
+
+
+```
+
+# **8.) Render and turn in your html quarto doc**
+
+You can do this however works for you. You should be able to turn in a link to your html file (if you publish on Rpubs or github, for exmaple) or you can turn in your acutal html file. Ensure that is works though! IF I can't load it you will get a U (and need to revise and resubmit)
+
+

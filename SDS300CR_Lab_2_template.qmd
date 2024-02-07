@@ -1,0 +1,118 @@
+---
+title: "SDS300CR_Lab_2_template"
+author: "YOUR NAME HERE"
+format:
+  html:
+    embed-resources: true
+    toc: true
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    self-contained: true
+editor: source
+---
+
+# **Part 0:** Read in packages we need
+
+Make a code chunk below and read in any packages you may need.
+
+# **Part 1:** How to manage data shape - pivoting!
+
+1. Read in [this data](https://github.com/jbaumann3/BIOL234_Biostats_MHC/blob/main/Ocean_Point_Data%202018.csv) from github
+```{r}
+
+```
+
+
+2. The data are survey data from the rocky intertidal in coastal Maine. Students worked at a transect (trans_description) in different years (year), they measured how high they were above (or below) the low tide line (tidal_ht), those numerical tide heights were converted into a ranked list to make bins (tidal_height_cat_number, 1-8 or so), and then students recorded either the percent of 2D area that was covered by a thing (if it was something that didn't move) OR how many individuals of a thing they saw (if a crab or snail or something). This abundance or cover data is in columnar form by species (or category) in the remaining columns. This works nicely when we are recording data on a clipboard in the field. BUT, R wants all of those names in 1 column and all of those numbers in a second column. We can use pivot_longer to convert this dataframe to long format. 
+Do that and then show me that it works!
+
+*note that everything from tectura to the end of the columnar data is a moving critter, so these are abundance and NOT %cover*
+```{r}
+
+
+```
+
+3. Use the note about the data (above) to make a new column that tells us whether the numerical data are % cover or abundance based on species. 
+
+```{r}
+
+```
+
+
+5. Make a graph that shows relative % cover for each tidal_ht_cat_num by trans_description.
+What kind of graph did you make and why? 
+```{r}
+
+```
+
+# **Part 2**: dplyr/tidyverse pipelines
+
+1. Read in [this coral cover data](https://github.com/jbaumann3/BIOL234_Biostats_MHC/blob/main/coralcover.csv) from github.
+
+In the following chunk, starting with the raw data from github, build a dplyr/tidyverse pipeline that calculates mean coral cover by reef type. Don't forget to calculate a relevant and useful error term for plotting
+```{r}
+
+```
+
+2. Using the resulting data frame, make a polished and presentable graphic (in ggplot) that shows population level differences in coral cover across reef types (each reef type is a population, in this case). DO NOT USE A BAR GRAPH. Make a caption to tell me what error bars mean. When I say polished I mean: a. no default color scheme, no gray background, include a useful legend and caption, and remove anything distracting or unhelpful. A boxplot is not a polished finished product for visual interogation of statistical differences (in this example).
+
+```{r}
+
+
+```
+
+3. Run the correct statistical test to accompany the plot above. Please confirm the test if you are uncertain which is best. There are multiple correct answers. Run the test and interpret it!
+```{r}
+
+
+
+```
+
+# **Part 3:** Time series data!
+
+Generally speaking, R has a tough time dealing with time formatting. This is a common issue in programming. There are special data formats called Datetime that we can use to work through this. 
+
+1. Read in [this time series data](https://github.com/jbaumann3/Belize-RT-Baumann-et-al-2021/blob/main/temperature%20and%20light/RT_in_situ_temp.csv) from github
+```{r}
+
+```
+These data are from an experiment I did recently on coral reefs in Belize. You should see temperature data from 2 sites across a range of dates. 
+
+2. Make a new column the combines the date and time into 1 column, name that column datetime
+```{r}
+
+
+```
+
+3. Using functions from the lubridate package (a lifesaver!), convert that column to datetime format
+```{r}
+
+```
+
+4. Make a time series plot of temperature that shows temp (or light) on y and datetime on x. Color by site
+```{r}
+
+```
+
+5. Do any kind of summarizing or reshaping/calculating you would like that helps us understand trends in this temperature data in another way (beyond just change over time). We are interested in the research question: "Does temperature differ between these two sites in any way?" - This includes more than just average or max temp. Do these sites look different in terms of any aspect of temperature? Explore with graphs below AND write a short 2-4 sentence summary of your findings. Stats are OPTIONAL. 
+```{r}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
